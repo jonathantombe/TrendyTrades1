@@ -1,0 +1,136 @@
+:root {
+    --color-principal: #1e8ad9;
+    --color-secundario: #46a6ea;
+    --color-terciario: #86c4f3;
+    --color-adicional-1: #F16D1C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color-principal);
+
+}
+
+h1 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--color-terciario);
+}
+
+h2 {
+    font-size: 14px;
+    margin-bottom: 14px;
+    color: var(--color-terciario);
+}
+
+header {
+    background-color: var(--color-adicional-1);
+    background-color: #1e8ad9;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor-v {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+.fa-solid {
+    position: absolute;
+    left: 20%;
+    color: #1e8ad9;
+}
+
+.input-buscador {
+    padding: 8px 0px 8px 40px;
+    border-radius: 5px;
+    border: none;
+}
+
+.fas-users {
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid white;
+    align-items: center;
+
+}
+
+.users {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+}
+
+.shopping-cart {
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: white;
+    color: var(--color-principal);
+}
+
+.linea {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+.linea::before,
+.linea::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 47%;
+    height: 1px;
+    background: linear-gradient(70deg, var(--color-adicional-1), transparent);
+}
+
+.linea::before {
+    left: 0;
+    transform: translateY(-50%);
+    background: linear-gradient(70deg, transparent, var(--color-adicional-1));
+
+}
+
+.linea::after {
+    right: 0;
+    transform: translateY(-50%);
+
+}
