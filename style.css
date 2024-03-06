@@ -134,3 +134,143 @@ header {
     transform: translateY(-50%);
 
 }
+
+
+
+
+.caja {
+    width: 5px;
+    height: 5px;
+    border: 2px groove;
+}
+
+#categories-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+#categories-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #46a6ea;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+
+#categories-nav a:hover {
+    background-color: #86c4f3;
+}
+#products-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)); 
+    gap: 5px;
+    padding: 20px;
+}
+
+.product {
+    border: 3px solid #F16D1C; 
+    width: 100px;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; 
+}
+
+.product img {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    position: absolute; 
+    bottom: 5px; 
+    left: 0; 
+    right: 0; 
+    text-align: center; 
+    margin: 10px; 
+    font-size: 14px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (min-width: 350px){
+    header{
+        padding: 10px;
+    }
+     .icons{
+        display: inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+   
+    .linea::before,
+    .linea::after {
+        width: 45%;
+    }
+
+}
+
+@media (min-width: 580px){
+    #categories-nav{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    #categories-nav a{
+        font-size: 14px;
+    }
+    .linea::before,
+    .linea::after {
+        width: 41%;
+    }
+
+
+}
+@media (min-width: 768px) {
+    .contenedor-div{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        
+    }
+    .icons{
+        display: inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    .linea::before,
+    .linea::after {
+        width: 43%;
+    }
+    
+}
+@media (min-width: 992px){
+
+}
+@media (min-width: 1200px){
+
+}
+
+
+

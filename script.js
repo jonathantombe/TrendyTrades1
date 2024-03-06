@@ -1,3 +1,28 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const categoriesNav = document.getElementById('categories-nav');
+    const productsSection = document.getElementById('products-section');
+
+
+    fetch('https://fakestoreapi.com/products/categories')
+        .then(response => response.json())
+        .then(categories => {
+            categories.forEach(category => {
+                const link = document.createElement('a');
+                link.textContent = category;
+                link.href = '#';
+                
+                link.addEventListener('click', () => {
+                    showProductsByCategory(category);
+                });
+                categoriesNav.appendChild(link);
+            });
+
+            showProductsByCategory('all');
+
+        })
+        .catch(error => console.error('Error fetching categories:', error));
+
+
 function showProductsByCategory(category) {
     productsSection.innerHTML = '';
 
