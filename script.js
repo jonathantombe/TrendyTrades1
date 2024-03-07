@@ -39,8 +39,7 @@ function showProductsByCategory(category) {
                 productElement.classList.add('product');
                 productElement.innerHTML = ` 
                         <img src="${product.image}" alt="${product.title}" class="product-image">
-                            <h3>${product.title}</h3>
-                            <p>${product.price}$</p>`
+                            <h3>${product.title}</h3>`
                     ;
                 productsSection.appendChild(productElement);
             });
