@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TrendyTrades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor-div">
+            <h1>TrendyTrades</h1>
+    
+            <div class="contenedor-v">
+                <input type="checkbox" id="check">
+                <label for="check" class="icons">
+                    <i class="fa fa-bars" id="menu-icon"></i>
+                    <i class="fa fa-times" id="close-icon"></i>
+                </label>
+    
+                <i class="fa-solid fa-magnifying-glass"></i>
+    
+                <input type="text" class="input-buscador" placeholder="Buscar productos....">
+                <div class="users">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="shopping-cart">
+                    <a href="templates/carritoCompra.html">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="linea">
+            <div>
+                <div class="caja"></div>
+                <div class="caja"></div>
+            </div>
+            <div class="">
+                <div class="caja"></div>
+                <div class="caja"></div>
+            </div>
+        </div>
+    
+        <h2>TrendyTrades</h2>
+    
+        <div class="linea">
+            <div>
+                <div class="caja"></div>
+                <div class="caja"></div>
+            </div>
+            <div>
+                <div class="caja"></div>
+                <div class="caja"></div>
+            </div>
+        </div>
+    
+        <nav id="categories-nav">
+    
+        </nav>
+    </header>
+    <main>
+        <section id="products-section">
+        </section>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-description"></p>
+            <p id="modal-category"></p>
+            <p id="modal-price"></p>
+            <button class="add-to-cart-button" data-producto='{"title": "Nombre del producto", "image": "url_de_la_imagen", "description": "Descripción del producto", "category": "Categoría del producto", "price": 10.99}'>Añadir al carrito de compras</button>
+        </div>
+    </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-linea">
+
+        </div>
+        <ul class="footer-nav">
+            <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-facebook-f"></i></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
