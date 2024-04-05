@@ -18,7 +18,25 @@ document.addEventListener('DOMContentLoaded', function () {
         modalCategory.textContent = `Categoría: ${product.category}`;
         modalPrice.textContent = `Precio: $${product.price}`;
         modal.style.display = 'block';
+        
+        // Agregar un evento de clic al botón para agregar el producto al carrito
+        const addToCartButton = document.querySelector('.add-to-cart-button');
+        addToCartButton.addEventListener('click', function() {
+            addToCart(product);
+            alert(`${product.title} ha sido agregado al carrito de compras.`);
+        });
     }
+    
+    function addToCart(product) {
+        // Obtener el carrito actual del almacenamiento local
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        // Agregar el nuevo producto al carrito
+        carrito.push(product);
+        // Guardar el carrito actualizado en el almacenamiento local
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+    
+    
 
     function closeModal() {
         modal.style.display = 'none';
